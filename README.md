@@ -1,8 +1,10 @@
 # CentOS 7 Ansible Test Image
 
-[![Docker Automated build](https://img.shields.io/docker/automated/geerlingguy/docker-centos7-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/geerlingguy/docker-centos7-ansible/)
+[![Docker Automated build](https://img.shields.io/docker/automated/inhavk/docker-centos7-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/inhavk/docker-centos7-ansible/)
 
-CentOS 7 Docker container for Ansible playbook and role testing.
+CentOS 7 Docker container for Ansible playbook and role testing. With python3 support.
+
+Fork of [geerlingguy/docker-centos7-ansible](https://github.com/geerlingguy/docker-centos7-ansible)
 
 ## Tags
 
@@ -44,3 +46,4 @@ I use Docker to test my Ansible roles and playbooks on multiple OSes using CI to
 ## Author
 
 Created in 2016 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+Updated (python3 support) by [InHavk](https://github.com/InHavk/)

@@ -1,8 +1,6 @@
 FROM centos:7
-LABEL maintainer="Jeff Geerling"
+MAINTAINER Anton Trusov <inhavk@gmail.com>
 ENV container=docker
-
-ENV pip_packages "ansible"
 
 # Install systemd -- See https://hub.docker.com/_/centos/
 RUN yum -y update; yum clean all; \
@@ -21,12 +19,16 @@ RUN yum makecache fast \
  && yum -y update \
  && yum -y install \
       sudo \
+      curl \
       which \
-      python-pip \
+      python36 \
  && yum clean all
 
+#INstall pip3
+RUN curl https://bootstrap.pypa.io/get-pip.py -o - | python36
+
 # Install Ansible via Pip.
-RUN pip install $pip_packages
+RUN pip3 install ansible requests dnspython3
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
