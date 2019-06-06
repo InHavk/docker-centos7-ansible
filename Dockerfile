@@ -22,6 +22,7 @@ RUN yum makecache fast \
       curl \
       which \
       python36 \
+      git \
  && yum clean all
 
 #INstall pip3
