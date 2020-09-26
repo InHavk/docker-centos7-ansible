@@ -25,8 +25,8 @@ RUN yum makecache fast \
       git \
  && yum clean all
 
-#INstall pip3
-RUN curl https://bootstrap.pypa.io/get-pip.py -o - | python36
+#Install pip3
+RUN curl https://bootstrap.pypa.io/get-pip.py -o - | python3.6
 
 # Install Ansible via Pip.
 RUN pip3 install ansible requests dnspython3
